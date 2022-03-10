@@ -1,0 +1,5 @@
+# DataProfiler.py
+matplotlib
+seaborn
+pandas
+
