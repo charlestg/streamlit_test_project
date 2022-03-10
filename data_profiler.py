@@ -25,12 +25,20 @@ st.set_page_config(
 # Display a title
 st.sidebar.title('Data Profiler')
 
+dataset = None
+
+# Enter file
+data_path = st.sidebar.text_input("Url", '')
+
+if len(data_path) > 0:
+    dataset = pd.read_csv(data_path)
+
 # upload files
 data_file = st.sidebar.file_uploader("Upload CSV",type=["csv"])
 
 # load the dataeset
 #dataset = load_boston()
-dataset = None
+
 if data_file is not None:
     dataset = pd.read_csv(data_file)
   
